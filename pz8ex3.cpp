@@ -10,7 +10,7 @@ int main() {
         cin >> arr[i];
     }
 
-    int minIndex = 0, maxIndex = 0;
+    int minIndex = 0, maxIndex = 0;  //дві змінні
     for (int i = 1; i < size; ++i) {
         if (arr[i] < arr[minIndex]) {
             minIndex = i;
@@ -20,7 +20,7 @@ int main() {
         }
     }
 
-    int temp = arr[minIndex];
+    int temp = arr[minIndex];  //міняються місцями найменший і найбільший індекс
     arr[minIndex] = arr[maxIndex];
     arr[maxIndex] = temp;
 
@@ -28,7 +28,7 @@ int main() {
     for (int i = 0; i < size; ++i) {
         cout << arr[i] << " ";
     }
-    cout << std::endl;
+    cout << еndl;
 
     return 0;
 }
