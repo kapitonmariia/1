@@ -9,7 +9,7 @@ int main() {
     srand(time(0));
 
     for (int i = 0; i < Size; ++i) {
-        numbers[i] = rand() % 100; 
+        numbers[i] = rand() % 100; //від 0 до 99
     }
 
     cout << "The original array: ";
