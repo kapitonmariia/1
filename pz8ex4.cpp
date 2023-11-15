@@ -1,36 +1,35 @@
 #include <iostream>
+
 using namespace std;
 
 int main() {
-    const int maxSize = 100; 
-    int arr[maxSize];
-    int size;
-
-   cout << "Enter the size of the array: ";
-    cin >> size;
-
-   if (size > maxSize) {
-        std::cout << "Error: Size exceeds the maximum allowed size.\n";
-        return 1; 
-    }
-
-   cout << "Enter " << size << " numbers:\n";
-    for (int i = 0; i < size; ++i) {
-        std::cin >> arr[i];
-    }
-
+    const int Size = 5; 
+    int numbers[Size];
     int A;
-    cout << "Enter the number A: ";
+
+    cout << "Enter number A: ";
     cin >> A;
 
+     srand(time(0));
+
+    for (int i = 0; i < Size; ++i) {
+        numbers[i] = rand() % 100; 
+    }
+
+    cout << "The original array: ";
+    for (int i = 0; i < Size; ++i) {
+        cout << numbers[i] << " ";
+    }
+    cout << endl;
+
     int count = 0;
-    for (int i = 0; i < size; ++i) {
-        if (arr[i] > A) {
+    for (int i = 0; i < Size; ++i) {
+        if (numbers[i] > A) {
             count++;
         }
     }
 
-    cout << "Number of elements greater than A: " << count << std::endl;
+    cout << "Number of elements greater than " << A << ": " << count << endl;
 
     return 0;
 }
